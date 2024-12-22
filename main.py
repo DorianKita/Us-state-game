@@ -12,7 +12,8 @@ states = data['state'].to_list()
 correct_guessess = []
 
 while len(correct_guessess) != 50:
-    answer_state = screen.textinput(title=f"{len(correct_guessess)}/50 States Correct", prompt="What's another state's name?").capitalize()
+    answer_state = screen.textinput(title=f"{len(correct_guessess)}/50 States Correct",
+                                    prompt="What's another state's name?").title()
     if answer_state in states:
         correct_guessess.append(answer_state)
         new_turtle = turtle.Turtle()
