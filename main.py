@@ -27,10 +27,10 @@ while len(correct_guessess) != 50:
         new_turtle.write(answer_state, font=('Arial', 10, 'bold'))
 
 
-to_learn = []
-for state in states:
-    if state not in correct_guessess:
-        to_learn.append(state)
+to_learn = [state for state in states if state not in correct_guessess]
+# for state in states:
+#     if state not in correct_guessess:
+#         to_learn.append(state)
 
 states_to_learn = {
     "States to learn" : to_learn
